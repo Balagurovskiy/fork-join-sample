@@ -2,7 +2,14 @@ package com.forkjoin.recursive_action;
 import java.util.Random;
 import java.util.concurrent.RecursiveTask;
 import java.util.logging.Logger;
-
+/**
+ * Example task.
+ * To simulate work time uses Thread.sleep with random value from 500 to 2000 ms.
+ * 'Execution' time is in dependency with fail ration of task (simulation of possible exception).
+ * Fail rate = 100 * (randExecuteTime - MIN_SEED(500)) / (MAX_SEED(1500) - MIN_SEED(500))
+ * @author OlexiySergiyovich
+ *
+ */
 public class Task{
 	
 	private Logger _logger;
